@@ -1,0 +1,21 @@
+{% extends 'order/base.html' %}
+{% load staticfiles %}
+
+	{% block content %}
+		<br><br><br>
+		<h1>Max's Chicken</h1>
+		<form>
+			<img src="{% static 'Pictures/chick.jpg' %}" width="200px" height="200px">
+			<br>
+			Quantity:<br>
+  			<input type="number" name="chick"><br>
+			<br>
+			<h1>Max's Fries</h1>
+			<img src="{% static 'Pictures/fries.jpg' %}" width="200px" height="200px">
+			<br>
+			Quantity:<br>
+			<input type="number" name="fries"><br>
+		</form>
+
+		<button><a href="receipt/">Checkout</a></button>
+	{% endblock %}
