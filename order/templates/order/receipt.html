@@ -1,7 +1,21 @@
 {% extends 'order/base.html' %}
 {% load staticfiles %}
-
 	{% block content %}
-		<h1>What you ordered</h1>
-		<h3>Thank you! Order again</h3>
+    <style>
+      h1 {
+        color: white;
+        font-family: 'Calibri';
+        font-size: 35pt;
+      }
+      h3 {
+        position: absolute;
+        left: 38%;
+        bottom: 0px;
+        color: white;
+        font-family: 'Mistral';
+        font-size: 30pt;
+      }
+      </style>
+		<center><h1>What You Ordered:</h1>
+		<h3>Thank you! Order again ☺</h3></center>
 	{% endblock %}
