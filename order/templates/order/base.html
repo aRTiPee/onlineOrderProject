@@ -1,13 +1,27 @@
 {% load staticfiles %}
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<title>Max's Online Order Store</title>
+  <link rel="icon" href="{% static 'Pictures/Maxs-Logo.png' %}"/>
+  <meta charset="utf-8"/>
+	{% block header %}
+	{% endblock %}
 </head>
-
-<body>
-	<h1><img src="{% static 'Pictures/logo.jpeg' %}" width="80px" height="80px">Max's Menu</h1>
+<style>
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  #logo {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+  }
+</style>
+<body background="{% static "Pictures/m.jpg" %}">
+  <a href="http://127.0.0.1:8000/"><img id="logo" src="{% static 'Pictures/Maxs-Logo.png' %}" width="150px" height="100px"></a>
 	{% block content %}
-
 	{% endblock %}
 </body>
 </html>
