@@ -1,17 +1,17 @@
 {% extends 'order/base.html' %}
 {% load staticfiles %}
 {% block content %}
-<link rel="Stylesheet" href="{% static 'css/style.css' %}"/>
-<center><h1>Craving for a "Sarap to the Bones"?</h1></center>
-<center><h2>Sign Up and Order Now!</h2></center>
-<center><form action="home/" method="get">
-    User Name: <br>
-    <input type="text" name="username">
-    <br>
-    <button class="nextpage" name="final"><b>SIGN-IN</b></button>
-</form>
+  <center>
+    <h1>Craving for a "Sarap to the Bones"?</h1>
+    <h2>Sign Up and Order Now!</h2>
+    <form action="home/" method="get" class="form">
+      User Name: <br/>
+      <input type="text" name="username" required><br/>
+      <button class="nextpage" name="final"><b>SIGN-IN</b></button>
+    </form>
     <form action="sign/" method="get">
-    <button class="another" name="in">SIGN-UP</button>
-    <p>Don't have an account? SIGN-UP Now!</p>
-</center>
+      <a href="sign/" ><button class="another" name="in">SIGN-UP</button></a>
+      <p>Don't have an account? SIGN-UP Now!</p>
+    </form>
+  </center>
 {% endblock %}
