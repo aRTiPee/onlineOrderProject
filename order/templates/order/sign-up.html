@@ -1,0 +1,17 @@
+{% extends 'order/base.html' %}
+{% load staticfiles %}
+{% block content %}
+  <center>
+    <h1>Craving for a "Sarap to the Bones"?</h1>
+    <h2>Sign Up and Order Now!</h2>
+    <form action="home/" method="get" class="form">
+      User Name: <br/>
+      <input type="text" name="username" required><br/>
+      <button class="nextpage" name="final"><b>SIGN-IN</b></button>
+    </form>
+    <form action="sign/" method="get">
+      <a href="sign/" ><button class="another" name="in">SIGN-UP</button></a>
+      <p>Don't have an account? SIGN-UP Now!</p>
+    </form>
+  </center>
+{% endblock %}

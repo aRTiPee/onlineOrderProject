@@ -7,3 +7,9 @@ def home(request):
 
 def receipt(request):
 	return render(request, 'order/receipt.html')
+
+def sign(request):
+  return render(request, 'order/sign-up.html')
+
+def sign1(request):
+  return render(request, 'order/sign.html')
