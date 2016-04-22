@@ -8,18 +8,19 @@ class Customer(models.Model):
 
     def __str__ (self):
         return self.name
-
+"""
 class Menu(models.Model):
     menu = models.CharField(max_length=10)
-    price = models.PositiveIntegerField()
+    price =  .PositiveIntegerField()
 
     def __str__ (self):
         return self.menu + " --- Php." + str(self.price) + ".00"
+"""
 
 class Order(models.Model):
     name = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    orders = models.ForeignKey(Menu)
-    quantity = models.PositiveIntegerField()
+    quantity_chicken = models.PositiveIntegerField(default=0)
+    quantity_fries = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return "History"
