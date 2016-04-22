@@ -2,26 +2,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Max's Online Order Store</title>
+  <title>Max's Online Order Store</title>
   <link rel="icon" href="{% static 'Pictures/Maxs-Logo.png' %}"/>
   <meta charset="utf-8"/>
-	{% block header %}
-	{% endblock %}
-</head>
-<style>
+  <link rel="Stylesheet" href="{% static 'css/style.css' %}"/>
+<style type="tex/css">
 body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-  #logo {
-    top: 0px;
-    left: 0px;
-    position: absolute;
-  }
+#logo {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
 </style>
+</head>
 <body background="{% static "Pictures/m.jpg" %}">
   <a href="http://127.0.0.1:8000/"><img id="logo" src="{% static 'Pictures/Maxs-Logo.png' %}" width="150px" height="100px"></a>
 	{% block content %}
 	{% endblock %}
+  <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script> 
+  {% block scripts %}
+  {% endblock scripts %}
 </body>
 </html>

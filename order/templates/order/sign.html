@@ -1,19 +1,16 @@
 {% extends 'order/base.html' %}
 {% load staticfiles %}
 {% block content %}
-<link rel="Stylesheet" href="{% static 'css/style.css' %}"/>
-    <center><h2>Fill-up the Following:</h2></center>
-    <center><form action="/home" method="get">
-    User Name: <br>
-    <input type="text" name="username">
-    <br>
-    First Name: <br>
-    <input type="text" name="firstname">
-    <br>
-    Address: <br>
-    <input type="text" name="address">
-    <br>
-    <button class="nextpage" name="final"><b>DONE</b></button>
+  <center>
+    <h2>Fill-up the Following:</h2>
+    <form action="/home" method="get">
+      User Name: <br/>
+      <input type="text" name="username" required=""><br/>
+      First Name: <br/>
+      <input type="text" name="firstname" required=""><br/>
+      Address: <br/>
+      <input type="text" name="address" required=""><br/>
+      <button class="nextpage" name="final"><b>DONE</b></button>
     </form>
-    </center>
+  </center>
 {% endblock %}
