@@ -18,10 +18,17 @@
         <input type="number" name="quantity_fries" value="0" min="0"/></center>
         <input type="hidden" name="username" value="{{ username }}"/>
       </div>
-      <input type="submit" value="CHECKOUT" class="nextpage" name="sub" />
+      <input type="submit" value="CHECKOUT" class="nextpage"/>
+      </form>
+      <form action="../" method="POST">
+      	{% csrf_token %}
+      	<input type="submit" class="button" value="LOG-OUT"/>
+      </form>
+      <form action="#" method="POST">
+      	{% csrf_token %}
+      	<input type="submit" class="history" value="HISTORY"/>
       </form>
     </div>
 {% endblock %}
 {% block scripts %}
-  <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 {% endblock scripts %}
