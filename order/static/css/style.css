@@ -7,12 +7,12 @@
 .right{
 	position: absolute;
 	top: -85px;
-	left:52%;
+	left: 57%;
 }
 .left{
 	position: absolute;
 	top: -85px;
-	right: 52%;
+	right: 55%;
 }
 .nextpage{
 	position:absolute;
@@ -48,7 +48,7 @@ h2 {
 }
 h3 {
   margin-top: 50px;
-  font-size: 25pt;
+  font-size: 20pt;
   color: #fff;
   font-family: 'Century Gothic';
 }
