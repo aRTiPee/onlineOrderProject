@@ -69,6 +69,9 @@ p {
     bottom: 0px;
     position: absolute;
 }
+.ordered{
+    position: static;
+}
 .another {
   border-radius: 5px;
   bottom: 15px;

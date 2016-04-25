@@ -19,7 +19,7 @@ class Menu(models.Model):
 """
 
 class Order(models.Model):
-    username = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    username = models.CharField(max_length=500, default="")
     quantity_chicken = models.PositiveIntegerField(default=0)
     quantity_fries = models.PositiveIntegerField(default=0)
 
