@@ -2,14 +2,15 @@
 {% load staticfiles %}
 {% block content %}
   <center>
-    <h2>Fill-up the Following:</h2>
-    <form action="/home" method="get">
+    <h2 class="qwerty">Fill-up the Following:</h2>
+    <form action="/home/" method="POST">
+      {% csrf_token %}
       User Name: <br/>
-      <input type="text" name="username" required=""><br/>
+      <input type="text" name="username" required><br/>
       First Name: <br/>
-      <input type="text" name="firstname" required=""><br/>
+      <input type="text" name="name" required><br/>
       Address: <br/>
-      <input type="text" name="address" required=""><br/>
+      <input type="text" name="address" required><br/>
       <button class="nextpage" name="final"><b>DONE</b></button>
     </form>
   </center>

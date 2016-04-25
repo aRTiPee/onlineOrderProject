@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from order import views
 from django.contrib import admin
+
 urlpatterns = [
 	url(r'^admin/', admin.site.urls),
     url(r'^$', views.sign, name="sign-up"),
     url(r'^home/$', views.home, name="home"),
-    url(r'^receipt/$', views.receipt, name="receipt"),
+    url(r'^menu/$', views.menu, name="menu"),
+    url(r'^(?P<getusername>\w+)/receipt/$', views.receipt, name="receipt"),
     url(r'^sign/$', views.sign1, name="sign-in"),
 ]
