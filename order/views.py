@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Customer, Order
-from .forms import Sign, Login, Buy
+from .forms import Sign, Login, Buy, LogOut
 import sys
 from pprint import pprint
 
@@ -41,8 +41,20 @@ def receipt(request):
 			post.save()
 		return render(request, 'order/receipt.html', {'username':username, 'quantity_chicken':quantity_chicken, 'quantity_fries':quantity_fries, 'total':total})
 
-def sign(request):
-	return render(request, 'order/sign-up.html')
+def logout(request):
+	if request.method == "POST":
+		form = LogOut(request.POST)
+		if form.is_valid():
+			post = form.save(commit=False)
+			username = post.username
+			l = Customer.objects.get(username=username)
+			if l:
+				l.is_login = False
+				l.save()
+		return render(request, 'order/sign-up.html')
 
 def sign1(request):
  	return render(request, 'order/sign.html')
+
+def sign(request):
+	return render(request, 'order/sign-up.html')

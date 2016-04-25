@@ -25,4 +25,5 @@ class Order(models.Model):
     cost = models.PositiveIntegerField(default=0)
 
     def __str__(self):
-        return "History"
+        costStr = str(self.cost)
+        return self.username + " - Total Cost: " + costStr

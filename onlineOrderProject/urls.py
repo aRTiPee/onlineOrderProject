@@ -20,6 +20,7 @@ from django.contrib import admin
 urlpatterns = [
 	url(r'^admin/', admin.site.urls),
     url(r'^$', views.sign, name="sign-up"),
+    url(r'^logout/$', views.logout, name="logout"),
     url(r'^home/$', views.home, name="home"),
     url(r'^menu/$', views.menu, name="menu"),
     url(r'^receipt/$', views.receipt, name="receipt"),

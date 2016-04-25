@@ -19,7 +19,7 @@ body {
 </style>
 </head>
 <body background="{% static "Pictures/m.jpg" %}">
-  <a href="http://127.0.0.1:8000/"><img id="logo" src="{% static 'Pictures/Maxs-Logo.png' %}" width="150px" height="100px"></a>
+  <a href="{% url 'sign-up' %}"><img id="logo" src="{% static 'Pictures/Maxs-Logo.png' %}" width="150px" height="100px"></a>
 	{% block content %}
 	{% endblock %}
   <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script> 
