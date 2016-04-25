@@ -18,15 +18,14 @@
 	position:absolute;
 	bottom:80px;
 	left: 46%;
-	padding: 15px 25px;
+	padding: 13px 20px;
   font-size: 15px;
   text-align: center;
   cursor: pointer;
-  outline: none;
   color: #fff;
   background-color: #ff1a1a;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 0 9px #999;
 }
 .nextpage:hover {background-color: #ff1a1a}
@@ -37,6 +36,7 @@
   transform: translateY(4px);
 }
 h1 {
+    margin-top: 20px;
     color: #fff;
     font-size: 50pt;
     font-family: 'Gabriola';
@@ -48,13 +48,14 @@ h2 {
 }
 h3 {
   margin-top: 50px;
-  font-size: 20pt;
+  font-size: 25pt;
   color: #fff;
-  font-family: 'Arial';
+  font-family: 'Century Gothic';
 }
 span {
 		font-family: 'Perpetua';
 		color: #cc0044;
+    font-size: 15pt;
 }
 form {
     margin-top: 40px;
@@ -78,13 +79,56 @@ p {
   font-size: 15px;
   background-color: #ff1a1a;
   color: #fff;
-  font-family: 
-  margin: 5px;
   cursor: pointer;
-  width: 120px;
+  width: 100px;
   border: none;
 }
 .another:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.50),0 17px 50px 0 rgba(0,0,0,0.20);
   color: #000;
+}
+.button {
+  display: inline-block;
+  padding: 10px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center; 
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ff1a1a;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 9px #999;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+}
+.button:active {
+  background-color: #ff1a1a;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.history {
+  display: inline-block;
+  padding: 10px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center; 
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ff1a1a;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 9px #999;
+  position: fixed;
+  right: 100px;
+  top: 10px;
+}
+.history:active {
+  background-color: #ff1a1a;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
