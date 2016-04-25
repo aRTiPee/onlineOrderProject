@@ -1,7 +1,6 @@
 {% extends 'order/base.html' %}
 {% load staticfiles %}
 	{% block content %}
-  {{username}}
     <style>
       h1 {
         color: white;
@@ -18,5 +17,8 @@
       }
       </style>
 		<center><h1>What You Ordered:</h1>
+            <h1 class="ordered">Chicken: {{ quantity_chicken }}<br>
+            Fries: {{ quantity_fries }}</h1>
+            <h1 class="ordered">Total Price: {{ total }}</h1>
 		<h3>Thank you! Order again ☺</h3></center>
 	{% endblock %}

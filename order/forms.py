@@ -1,5 +1,6 @@
 from django import forms
 from .models import Customer, Order
+from django.forms import inlineformset_factory
 
 class Sign(forms.ModelForm):
 	class Meta:
