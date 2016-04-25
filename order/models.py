@@ -22,6 +22,7 @@ class Order(models.Model):
     username = models.CharField(max_length=500, default="")
     quantity_chicken = models.PositiveIntegerField(default=0)
     quantity_fries = models.PositiveIntegerField(default=0)
+    cost = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return "History"

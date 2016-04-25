@@ -36,8 +36,9 @@ def receipt(request):
 			username = post.username
 			quantity_chicken = post.quantity_chicken
 			quantity_fries = post.quantity_fries
-			post.save()
 			total = quantity_chicken * 250 + quantity_fries * 100
+			post.cost = total
+			post.save()
 		return render(request, 'order/receipt.html', {'username':username, 'quantity_chicken':quantity_chicken, 'quantity_fries':quantity_fries, 'total':total})
 
 def sign(request):
