@@ -1,4 +1,23 @@
 {% extends 'order/base.html' %}
 {% load staticfiles %}
 {% block content %}
+    {% for hist in histories %}
+        {% if hist %}
+            <center><h2 class="hist">
+            Username: {{ hist.username }}<br>
+            Chicken: {{ hist.quantity_chicken }}<br>
+            Fries: {{ hist.quantity_fries }}<br>
+            Cost: Php {{ hist.cost }}.00</h2></center><br>
+        {% endif %}
+    {% endfor %}
+    <form action="../logout/" method="POST">
+      	{% csrf_token %}
+        <input type="hidden" name="username" value="{{ username }}"/>
+      	<input type="submit" class="button" value="LOG-OUT"/>
+      </form>
+    <form action="../menu/" method="POST">
+      	{% csrf_token %}
+        <input type="hidden" name="username" value="{{ username }}"/>
+      	<input type="submit" class="history" value="MENU"/>
+      </form>
 {% endblock %}

@@ -73,6 +73,10 @@ p {
 .ordered{
     position: static;
 }
+.hist {
+  color: white;
+  font-family: Courier;
+}
 .another {
   border-radius: 5px;
   bottom: 15px;

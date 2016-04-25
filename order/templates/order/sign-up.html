@@ -5,15 +5,15 @@
     {{username}}
     <h1>Craving for a "Sarap to the Bones"?</h1>
     <h2 class="qwerty">Sign In to Order Now!</h2>
-    <form action="menu/" method="POST" class="form">
+    <form action="../menu/" method="POST" class="form">
       {% csrf_token %}
       User Name: <br/>
       <input type="text" name="username" required><br/>
       <button class="nextpage" name="final"><b>SIGN-IN</b></button>
     </form>
-    <form action="sign/" method="POST">
+    <form action="../sign/" method="POST">
       {% csrf_token %}
-      <a href="sign/" ><button class="another" name="in">SIGN-UP</button></a>
+      <a href="../sign/" ><button class="another" name="in">SIGN-UP</button></a>
       <p>Don't have an account? SIGN-UP Now!</p>
     </form>
   </center>

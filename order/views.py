@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Customer, Order
-from .forms import Sign, Login, Buy, LogOut
+from .forms import Sign, Login, Buy, LogOut, Histori
 import sys
 from pprint import pprint
 
@@ -51,10 +51,19 @@ def logout(request):
 			if l:
 				l.is_login = False
 				l.save()
-		return render(request, 'order/sign-up.html')
+			return render(request, 'order/sign-up.html')
 
 def sign1(request):
  	return render(request, 'order/sign.html')
 
 def sign(request):
 	return render(request, 'order/sign-up.html')
+
+def history(request):
+	if request.method == "POST":
+		form = Histori(request.POST)
+		if form.is_valid():
+			post = form.save(commit=False)
+			username = post.username
+			histories = Order.objects.filter(username=username)
+			return render(request, 'order/history.html', {'histories':histories, 'username':username})

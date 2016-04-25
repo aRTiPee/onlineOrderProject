@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^logout/$', views.logout, name="logout"),
     url(r'^home/$', views.home, name="home"),
     url(r'^menu/$', views.menu, name="menu"),
+    url(r'^history/$', views.history, name="history"),
     url(r'^receipt/$', views.receipt, name="receipt"),
     url(r'^sign/$', views.sign1, name="sign-in"),
 ]

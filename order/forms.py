@@ -21,3 +21,8 @@ class LogOut(forms.ModelForm):
 	class Meta:
 		model = Customer
 		fields = ('username',)
+
+class Histori(forms.ModelForm):
+	class Meta:
+		model = Order
+		fields = ('username',)

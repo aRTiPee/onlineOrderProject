@@ -20,12 +20,14 @@
       </div>
       <input type="submit" value="CHECKOUT" class="nextpage"/>
       </form>
-      <form action="../" method="POST">
+      <form action="../logout/" method="POST">
       	{% csrf_token %}
+        <input type="hidden" name="username" value="{{ username }}"/>
       	<input type="submit" class="button" value="LOG-OUT"/>
       </form>
-      <form action="#" method="POST">
+      <form action="../history/" method="POST">
       	{% csrf_token %}
+        <input type="hidden" name="username" value="{{ username }}"/>
       	<input type="submit" class="history" value="HISTORY"/>
       </form>
     </div>

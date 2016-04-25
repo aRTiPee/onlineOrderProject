@@ -19,6 +19,16 @@
 		<center><h1>What You Ordered:</h1>
             <h1 class="ordered">Chicken: {{ quantity_chicken }}<br>
             Fries: {{ quantity_fries }}</h1>
-            <h1 class="ordered">Total Price: {{ total }}</h1>
+            <h1 class="ordered">Total Price: Php {{ total }}.00</h1>
 		<h3>Thank you! Order again ☺</h3></center>
+        <form action="../logout/" method="POST">
+      	{% csrf_token %}
+        <input type="hidden" name="username" value="{{ username }}"/>
+      	<input type="submit" class="button" value="LOG-OUT"/>
+      </form>
+      <form action="../history/" method="POST">
+      	{% csrf_token %}
+        <input type="hidden" name="username" value="{{ username }}"/>
+      	<input type="submit" class="history" value="HISTORY"/>
+      </form>
 	{% endblock %}
