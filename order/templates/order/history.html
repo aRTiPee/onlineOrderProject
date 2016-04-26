@@ -1,6 +1,7 @@
 {% extends 'order/base.html' %}
 {% load staticfiles %}
 {% block content %}
+    <img id="logo" src="{% static 'Pictures/Maxs-Logo.png' %}" width="150px" height="100px">
     {% for hist in histories %}
         {% if hist %}
             <center><h2 class="hist">

@@ -1,6 +1,7 @@
 {% extends 'order/base.html' %}
 {% load staticfiles %}
 {% block content %}
+    <a href="{% url 'sign-up' %}"><img id="logo" src="{% static 'Pictures/Maxs-Logo.png' %}" width="150px" height="100px"></a>
   <center>
     <h2 class="qwerty">Fill-up the Following:</h2>
     <form action="/home/" method="POST">
